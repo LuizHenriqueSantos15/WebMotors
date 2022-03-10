@@ -3,14 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { ComprarComponent } from './comprar/comprar.component';
+import { VenderComponent } from './vender/vender.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [				
+    AppComponent,
+      NavComponent,
+      InicioComponent,
+      ComprarComponent,
+      VenderComponent
+   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

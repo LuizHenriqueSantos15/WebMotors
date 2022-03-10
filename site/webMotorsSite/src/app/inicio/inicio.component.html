@@ -1,0 +1,32 @@
+<main>
+  <div class="cont">
+    <div class="contHead">
+      <h3>Comprar Carros</h3>
+      <h3>Comprar Motos</h3>
+      <h3>Serviços Automotivos</h3>
+    </div>
+
+    <div class="form">
+      <input class="text" type="text" placeholder="Digite o modelo ou marca do carro" required [(ngModel)]="nomeCarro">
+
+      <input (click)="pegarCarroDesejado()" class="btn" type="button" routerLink="comprar" value="VER OFERTAS">
+    </div>
+    
+    <h3 class="UltimasBuscas">Suas Últimas Buscas</h3>
+
+    <div class="buscas">
+      <article>
+        <img class="imgBuscas" src="https://cdn.motor1.com/images/mgl/8wbyv/s3/vw-nivus-highline-2020-superteste.jpg" alt="">
+      </article>
+
+      <article>
+        <img class="imgBuscas" src="https://cdn.motor1.com/images/mgl/JYjbJ/s3/2019-volkswagen-jetta-gli-live.jpg" alt="">
+      </article>
+
+      <article>
+        <img class="imgBuscas" src="https://cdn.motor1.com/images/mgl/oRw1E/s3/2021-volkswagen-polo-gti-facelift.jpg" alt="">
+      </article>
+    </div>
+
+  </div>
+</main>

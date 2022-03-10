@@ -1,0 +1,163 @@
+.sideBar{
+    background-color: #fff;
+    width: 20vw;
+    height: 100vh;
+    border-radius: 5px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+.contSideBar{
+    line-height: 0px;
+    text-align: start;
+    margin-left: 15px;
+    width: 100%;
+}
+
+hr{
+    width: 101%;
+    margin-top: 25px;
+    margin-left: -20px;
+    color: #dfe0e7;
+}
+
+.sideHead{
+    display: flex;
+}
+
+.titleSideBar{
+    font-weight: 500;
+    margin-left: 15%;
+    color: #979ba4;
+}
+
+img{
+    cursor: pointer;
+}
+
+h6{
+    font-weight: 600;
+    font-size: 16px
+}
+
+.text{
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid #dfe0e7;
+    padding: 7px;
+}
+
+main{
+    display: flex;
+
+}
+
+.imgMarcas{
+    margin-left: 10px;
+}
+
+.imgMarcas:hover{
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.marca{
+    width: 101%;
+}
+
+.marcaCars{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.ofertas{
+    margin-top: -25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.check{
+    margin-right: 15px;
+}
+
+
+.cont{
+    display: flex;
+    flex-direction: column;
+}
+
+.contHead{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 80vw;
+    margin-top: 2px;
+    align-items: center;
+}
+
+h5{
+    margin-left: 15px;
+    border: 2px solid grey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.conteudoPag{
+    text-align: center;
+}
+
+.carros{
+    margin-left: 15%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partimentCar{
+    margin-top: 10px;
+    display: flex;
+}
+
+.car{
+    line-height: 10px;
+    border-radius: 10px;
+    margin-left: 6px;
+    border: 2px solid white;
+    background-color: white;
+}
+.fotoCar{
+    border-bottom: 2px solid grey;
+}
+h4{
+    font-weight: 550;
+    margin-left: -100px;
+    font-size: 22px;
+}
+
+.preco{
+    margin-top: 40px;
+    margin-left: -60px;
+}
+.modelo{
+    font-weight: 450;
+    margin-top: -20px;
+    margin-left: -67px;
+}
+
+p{
+    margin-left: 12px;
+    font-size: 12px;
+}
+
+.rodape{
+    display: flex;
+}
+
+.titleSideBar:hover{
+    cursor: pointer;
+    color: #000;
+    transition: 0.3s all;
+}
