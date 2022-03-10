@@ -136,6 +136,11 @@ input{
         flex-direction: column;
     }
 
+    body{
+        width: 100vw;
+        align-items: center;
+    }
+
     form{
         flex-direction: column;
     }
@@ -177,5 +182,11 @@ input{
     .text{
         margin-left: -5px;
         width: 60%;
+    }
+}
+
+@media screen and (min-width: 412px) {
+    .buscas{
+        margin-left: -120px;
     }
 }
