@@ -157,7 +157,7 @@ input{
     }
 
     .buscas{
-        margin-left: -70px;
+        margin-left: -25%;
         flex-direction: column;
     }
 
@@ -185,8 +185,9 @@ input{
     }
 }
 
-@media screen and (min-width: 412px) {
+@media screen and (max-width: 412px) and (min-width: 412px) {
     .buscas{
-        margin-left: -120px;
+        align-self: center;
+        margin-left: -30%;
     }
 }
