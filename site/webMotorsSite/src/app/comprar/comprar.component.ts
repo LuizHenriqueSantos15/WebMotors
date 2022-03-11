@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InicioComponent } from '../inicio/inicio.component';
+import { Carro } from '../models/carro';
+import { ComprarService } from './comprar.service';
 
 @Component({
   selector: 'app-comprar',
@@ -13,17 +15,23 @@ export class ComprarComponent implements OnInit {
   faixaPreco:string;
   nomeCarro:string;
   inicio:InicioComponent;
-  constructor() { }
+  carros:Carro[];
+  constructor(private service: ComprarService) { }
 
   ngOnInit() {
-   this.localidade = 'São José Dos Campos/Sp';
-   this.ano = '2020';
-   this.faixaPreco= '40.000,00';
+    this.carregarCarros();
   }
 
   carregarCarros(){
-    var carros = this.inicio.pegarCarroDesejado();
-    this.nomeCarro = carros;
-  }
+    this.service.getAllCars()
+    .subscribe((carros: Carro[]) => {
+      this.carros = carros;
+      console.log(this.carros);
 
+      this.carros.forEach(carro => {
+        this.localidade = carro.localidade;
+        this.faixaPreco = carro.preco;
+      });
+  });
+}
 }

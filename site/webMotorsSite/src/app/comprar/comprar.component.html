@@ -1,3 +1,15 @@
+<header>
+  <article routerLink="" class="icon">
+    <img width="150" src="https://www.webmotors.com.br/assets/img/webmotors.svg?t=1.0.0" alt="">
+  </article>
+
+  <ul>
+    <li> <a routerLink="comprar"> Comprar </a> </li>
+    <li> <a routerLink="vender"> Vender </a> </li>
+    <li> <a class="conta" href=""> Já tem Uma Conta?</a> </li>
+  </ul>
+</header>
+
 <main>
   <div class="sideBar">
     <div class="sideHead">
@@ -39,93 +51,25 @@
   </div>
 
   <div class="cont">
-    <div class="contHead">
-      <h5>{{localidade}}</h5>
-      <h5>{{ano}}</h5>
-      <h5>{{faixaPreco}}</h5>
-    </div>
 
     <div class="conteudoPag">
-      <h3>Carros Novos e Usados em {{localidade}} a partir do ano {{ano}}</h3>
 
       <div class="carros">
         <div class="partimentCar">
-          <article class="car">
-            <img class="fotoCar" src="https://image.webmotors.com.br/_fotos/AnuncioUsados/gigante/2022/202201/20220110/volkswagen-jetta-2.0-350-tsi-gasolina-gli-dsg-WMIMAGEM1414224400.jpg?s=fill&w=249&h=186&q=70" alt="">
+          <article *ngFor="let carro of carros" class="car">
+            <img class="fotoCar" src={{carro.foto}} alt="">
   
-            <h4>{{nomeCarro}}</h4>
-            <h6 class="modelo"> 1.6 MI Confortline</h6>
-            <h4 class="preco"> R$ 40.000,00</h4>
+            <h4>{{carro.nome}}</h4>
+            <h6 class="modelo">{{carro.modelo}}</h6>
+            <h4 class="preco"> R$ {{carro.preco}}</h4>
             <div class="rodape">
-              <p>2020</p> <p>93.000km</p>
-            <p>São José Dos Campos</p>
+              <p>{{carro.ano}}</p> <p>{{carro.quilometragem}}</p>
+            <p>{{carro.localidade}}</p>
             </div>
           </article>
-  
-          <article class="car">
-            <img class="fotoCar" src="https://image.webmotors.com.br/_fotos/AnuncioUsados/gigante/2022/202201/20220110/volkswagen-jetta-2.0-350-tsi-gasolina-gli-dsg-WMIMAGEM1414224400.jpg?s=fill&w=249&h=186&q=70" alt="">
-  
-            <h4>{{nomeCarro}}</h4>
-            <h6 class="modelo"> 1.6 MI Confortline</h6>
-            <h4 class="preco"> R$ 40.000,00</h4>
-            <div class="rodape">
-              <p>2020</p> <p>93.000km</p>
-            <p>São José Dos Campos</p>
-            </div>
-          </article>
-  
-          <article class="car">
-            <img class="fotoCar" src="https://image.webmotors.com.br/_fotos/AnuncioUsados/gigante/2022/202201/20220110/volkswagen-jetta-2.0-350-tsi-gasolina-gli-dsg-WMIMAGEM1414224400.jpg?s=fill&w=249&h=186&q=70" alt="">
-  
-            <h4>{{nomeCarro}}</h4>
-            <h6 class="modelo"> 1.6 MI Confortline</h6>
-            <h4 class="preco"> R$ 40.000,00</h4>
-            <div class="rodape">
-              <p>2020</p> <p>93.000km</p>
-            <p>São José Dos Campos</p>
-            </div>
-          </article>
-        </div>
 
-        <div class="partimentCar">
-          <article class="car">
-            <img class="fotoCar" src="https://image.webmotors.com.br/_fotos/AnuncioUsados/gigante/2022/202201/20220110/volkswagen-jetta-2.0-350-tsi-gasolina-gli-dsg-WMIMAGEM1414224400.jpg?s=fill&w=249&h=186&q=70" alt="">
-  
-            <h4>{{nomeCarro}}</h4>
-            <h6 class="modelo"> 1.6 MI Confortline</h6>
-            <h4 class="preco"> R$ 40.000,00</h4>
-            <div class="rodape">
-              <p>2020</p> <p>93.000km</p>
-            <p>São José Dos Campos</p>
-            </div>
-          </article>
-  
-          <article class="car">
-            <img class="fotoCar" src="https://image.webmotors.com.br/_fotos/AnuncioUsados/gigante/2022/202201/20220110/volkswagen-jetta-2.0-350-tsi-gasolina-gli-dsg-WMIMAGEM1414224400.jpg?s=fill&w=249&h=186&q=70" alt="">
-  
-            <h4>{{nomeCarro}}</h4>
-            <h6 class="modelo"> 1.6 MI Confortline</h6>
-            <h4 class="preco"> R$ 40.000,00</h4>
-            <div class="rodape">
-              <p>2020</p> <p>93.000km</p>
-            <p>São José Dos Campos</p>
-            </div>
-          </article>
-  
-          <article class="car">
-            <img class="fotoCar" src="https://image.webmotors.com.br/_fotos/AnuncioUsados/gigante/2022/202201/20220110/volkswagen-jetta-2.0-350-tsi-gasolina-gli-dsg-WMIMAGEM1414224400.jpg?s=fill&w=249&h=186&q=70" alt="">
-  
-            <h4>{{nomeCarro}}</h4>
-            <h6 class="modelo"> 1.6 MI Confortline</h6>
-            <h4 class="preco"> R$ 40.000,00</h4>
-            <div class="rodape">
-              <p>2020</p> <p>93.000km</p>
-            <p>São José Dos Campos</p>
-            </div>
-          </article>
+          
         </div>
-
-        
         
       </div>
     </div>

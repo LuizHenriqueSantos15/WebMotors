@@ -1,10 +1,14 @@
 .sideBar{
     background-color: #fff;
-    width: 20vw;
+    width: 320px;
     height: 100vh;
     border-radius: 5px;
     margin-top: 3px;
     text-align: center;
+    position: fixed;
+    z-index: 3;
+    margin-top: 70px;
+    transition: left .5s;
 }
 
 .contSideBar{
@@ -37,7 +41,8 @@ img{
 
 h6{
     font-weight: 600;
-    font-size: 16px
+    font-size: 16px;
+    text-align: start;
 }
 
 .text{
@@ -106,22 +111,33 @@ h5{
 
 .conteudoPag{
     text-align: center;
+    width: 100%;
+
 }
 
 .carros{
-    margin-left: 15%;
-    width: 70%;
+    margin-left: 22%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
 .partimentCar{
-    margin-top: 10px;
+    margin-top: 10%;
+    margin-left: 25%;
+    width: 90%;
     display: flex;
+    flex-wrap: wrap;
+    place-content: stretch center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .car{
+    margin-bottom: 5px;
     line-height: 10px;
     border-radius: 10px;
     margin-left: 6px;
@@ -133,18 +149,16 @@ h5{
 }
 h4{
     font-weight: 550;
-    margin-left: -100px;
+    text-align: start;
     font-size: 22px;
 }
 
 .preco{
     margin-top: 40px;
-    margin-left: -60px;
 }
 .modelo{
     font-weight: 450;
-    margin-top: -20px;
-    margin-left: -67px;
+    text-align: start;
 }
 
 p{
@@ -160,4 +174,58 @@ p{
     cursor: pointer;
     color: #000;
     transition: 0.3s all;
+}
+
+
+header{
+    align-items: center;
+    box-shadow: -1px -1px 5px #b1b6bd;
+    background-color: #fff;
+    height: 9.2vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.icon{
+    margin-top: 2px;
+    margin-left: 16px;
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    margin-right: 35px;
+    margin-left: 15px;
+    color: transparent;
+}
+
+a{
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #595864;
+}
+
+a:hover{
+    color: black;
+    transition: 0.3s all;
+}
+
+/*responsividades*/
+
+@media screen and (max-width: 768px) {
+    header{
+        height: 17vh;
+        width: 100vw;
+        flex-direction: column;
+    }
 }
