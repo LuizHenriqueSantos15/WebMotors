@@ -16,6 +16,7 @@ export class ComprarComponent implements OnInit {
   nomeCarro:string;
   inicio:InicioComponent;
   carros:Carro[];
+  marca:string;
   constructor(private service: ComprarService) { }
 
   ngOnInit() {
@@ -23,7 +24,7 @@ export class ComprarComponent implements OnInit {
   }
 
   carregarCarros(){
-    this.service.getAllCars()
+    this.service.getDef()
     .subscribe((carros: Carro[]) => {
       this.carros = carros;
       console.log(this.carros);
@@ -34,4 +35,5 @@ export class ComprarComponent implements OnInit {
       });
   });
 }
+
 }
