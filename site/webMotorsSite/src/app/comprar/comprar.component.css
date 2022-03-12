@@ -71,8 +71,10 @@ main{
 }
 
 .marcaCars{
+    overflow: auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 
@@ -127,7 +129,7 @@ h5{
 }
 
 .partimentCar{
-    margin-top: 10%;
+    margin-top: 0%;
     margin-left: 25%;
     width: 90%;
     display: flex;
@@ -144,8 +146,14 @@ h5{
 .fotoCar{
     border-bottom: 2px solid grey;
 }
-h4{
+
+.titleCarsSearch{
+    font-size: 30px;
     font-weight: 550;
+    color: rgba(46, 46, 55, 1);
+}
+h4{
+    font-weight: 400;
     text-align: start;
     font-size: 22px;
 }

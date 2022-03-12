@@ -13,16 +13,16 @@
 <main>
   <div class="sideBar">
     <div class="sideHead">
-      <h3 class="titleSideBar">Carros</h3>
-      <h3 class="titleSideBar">Motos</h3>
+      <h3 (click)="carregarCarros()" class="titleSideBar">Carros</h3>
+      <h3 (click)="carregarMotos()" class="titleSideBar">Motos</h3>
     </div>
 
     <div class="contSideBar">
       <h6>Localização</h6>
 
-    <form>
-      <input class="text" type="text" placeholder="Digite seu Estado ou Cidade">
-    </form>
+    <div class="form">
+      <input (change)="carregarCarrosByLocalidadeAndMarca()" [(ngModel)]="localidade" class="text" type="text" placeholder="Digite seu Estado ou Cidade">
+    </div>
 
     <hr>
 
@@ -39,13 +39,35 @@
 
     <div class="marcaCars">
       <article class="imgMarcas">
-        <img width="85" src="https://th.bing.com/th/id/R.3bd649b94067ad46e33c5ba232b7415a?rik=1qx7HCQ9TcSnVA&riu=http%3a%2f%2fpngimg.com%2fuploads%2fbmw_logo%2fbmw_logo_PNG19713.png&ehk=FKIy3EeVVkGz%2bi%2f4bdcwAyfPOxHB0s%2f%2fkpWLdhf2Bko%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="">
+        <img (click)="carregarCarrosByMarca('bmw')" width="85" src="https://th.bing.com/th/id/R.3bd649b94067ad46e33c5ba232b7415a?rik=1qx7HCQ9TcSnVA&riu=http%3a%2f%2fpngimg.com%2fuploads%2fbmw_logo%2fbmw_logo_PNG19713.png&ehk=FKIy3EeVVkGz%2bi%2f4bdcwAyfPOxHB0s%2f%2fkpWLdhf2Bko%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="">
       </article>
 
       <article class="imgMarcas">
-        <img width="80" src="https://th.bing.com/th/id/OIP.vFJiqUAS7nSoTCblp4_l5QHaHa?pid=ImgDet&rs=1" alt="">
+        <img (click)="carregarCarrosByMarca('volkswagen')" width="80" src="https://th.bing.com/th/id/OIP.vFJiqUAS7nSoTCblp4_l5QHaHa?pid=ImgDet&rs=1" alt="">
       </article>
+
+      <article class="imgMarcas">
+        <img (click)="carregarCarrosByMarca('chevrolet')" width="80" src="https://www.webmotors.com.br/imagens/prod/portal/img/logos/carro/chevrolet.png?s=fill&w=72&h=72&q=80&t=true&z=1.0.0" alt="">
+      </article>
+
+      <article class="imgMarcas">
+        <img (click)="carregarCarrosByMarca('honda')" width="80" src="https://www.webmotors.com.br/imagens/prod/portal/img/logos/carro/honda.png?s=fill&w=72&h=72&q=80&t=true&z=1.0.0" alt="">
+      </article>
+
+      <article class="imgMarcas">
+        <img (click)="carregarCarrosByMarca('ford')" width="80" src="https://www.webmotors.com.br/imagens/prod/portal/img/logos/carro/ford.png?s=fill&w=72&h=72&q=80&t=true&z=1.0.0" alt="">
+      </article>
+
+      <article class="imgMarcas">
+        <img (click)="carregarCarrosByMarca('fiat')" width="80" src="https://www.webmotors.com.br/imagens/prod/portal/img/logos/carro/fiat.png?s=fill&w=72&h=72&q=80&t=true&z=1.0.0" alt="">
+      </article>
+
+      <article class="imgMarcas">
+        <img (click)="carregarCarrosByMarca('hyundai')" width="80" src="https://www.webmotors.com.br/imagens/prod/portal/img/logos/carro/hyundai.png?s=fill&w=72&h=72&q=80&t=true&z=1.0.0" alt="">
+      </article>
+      
     </div>
+
 
     </div>
   </div>
@@ -54,6 +76,7 @@
 
     <div class="conteudoPag">
 
+      <h3 class="titleCarsSearch">{{tipo}} Encontrados em Todo o Brasil</h3>
       <div class="carros">
         <div class="partimentCar">
           <article *ngFor="let carro of carros" class="car">
